@@ -282,7 +282,7 @@ const ArticleEngine = {
         "name": "உழவர் செய்திகள்",
         "logo": {
           "@type": "ImageObject",
-          "url": window.location.origin + "/assets/images/logo/logo.svg"
+          "url": window.location.origin + "/assets/images/logo/logo.png"
         }
       },
       "description": a.excerpt

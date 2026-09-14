@@ -170,7 +170,7 @@ img {
    ------------------------------------------------------------- */
 .main-header {
   background-color: var(--bg-card);
-  padding: 16px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--news-border);
 }
 
@@ -181,8 +181,8 @@ img {
 }
 
 .brand-icon-box {
-  width: 220px;
-  height: 64px;
+  width: 240px;
+  height: 120px;
   border-radius: 0;
   background-image: url('../images/logo/logo.png');
   background-color: transparent;
@@ -206,7 +206,6 @@ img {
 }
 
 .brand-text-box {
-  display: flex;
   flex-direction: column;
   display: none;
 }
