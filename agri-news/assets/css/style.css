@@ -208,6 +208,7 @@ img {
 .brand-text-box {
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .brand-title {
