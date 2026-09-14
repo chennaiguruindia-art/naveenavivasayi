@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "விவசாய செய்திகள்",
+    "name_en": "Agriculture News",
+    "slug": "agriculture-news",
+    "icon": "fa-newspaper",
+    "description": "தமிழ்நாடு மற்றும் இந்திய அளவிலான முக்கிய விவசாய செய்திகள் மற்றும் சமீபத்திய தகவல்கள்.",
+    "count": 28
+  },
+  {
+    "id": 2,
+    "name": "விவசாயிகள் குரல்",
+    "name_en": "Farmers Voice",
+    "slug": "farmers",
+    "icon": "fa-users",
+    "description": "விவசாயிகளின் கள நிலவரங்கள், கோரிக்கைகள், போராட்டங்கள் மற்றும் வாழ்வியல் அனுபவங்கள்.",
+    "count": 19
+  },
+  {
+    "id": 3,
+    "name": "நெல் சாகுபடி",
+    "name_en": "Paddy Cultivation",
+    "slug": "paddy",
+    "icon": "fa-seedling",
+    "description": "நெல் கொள்முதல் விலை, புதிய நெல் ரகங்கள், நேரடி நெல் கொள்முதல் நிலைய நிலவரங்கள்.",
+    "count": 24
+  },
+  {
+    "id": 4,
+    "name": "காய்கறிகள் & பழங்கள்",
+    "name_en": "Horticulture",
+    "slug": "horticulture",
+    "icon": "fa-carrot",
+    "description": "தக்காளி, வெங்காயம், வாழை, மா உள்ளிட்ட தோட்டக்கலைப் பயிர்களின் உற்பத்தி மற்றும் விலை நிலவரங்கள்.",
+    "count": 16
+  },
+  {
+    "id": 5,
+    "name": "இயற்கை விவசாயம்",
+    "name_en": "Organic Farming",
+    "slug": "organic-farming",
+    "icon": "fa-leaf",
+    "description": "ஜீவாமிர்தம், பஞ்சகவ்யா, இயற்கை பூச்சி விரட்டிகள் மற்றும் நஞ்சு இல்லாத இயற்கை விவசாய வழிமுறைகள்.",
+    "count": 22
+  },
+  {
+    "id": 6,
+    "name": "அரசுத் திட்டங்கள் & மானியம்",
+    "name_en": "Government Schemes",
+    "slug": "government-schemes",
+    "icon": "fa-landmark",
+    "description": "பிரதமர் கிசான் திட்டம், தமிழ்நாடு உழவர் நலத்துறை மானியங்கள் மற்றும் இலவச மின்சாரத் தகவல்கள்.",
+    "count": 31
+  },
+  {
+    "id": 7,
+    "name": "சந்தை விலை & MSP",
+    "name_en": "Market Prices & MSP",
+    "slug": "market-prices",
+    "icon": "fa-chart-line",
+    "description": "தமிழ்நாட்டின் முக்கிய உழவர் சந்தைகள் மற்றும் ஒழுங்குமுறை விற்பனைக்கூடங்களின் தினசரி விலை நிலவரம்.",
+    "count": 45
+  },
+  {
+    "id": 8,
+    "name": "வானிலை & மழை நிலவரம்",
+    "name_en": "Weather",
+    "slug": "weather",
+    "icon": "fa-cloud-sun-rain",
+    "description": "வானிலை ஆய்வு மைய எச்சரிக்கைகள், பருவமழை நிலவரம் மற்றும் பாசன நீர் சேமிப்பு வழிகாட்டல்கள்.",
+    "count": 14
+  },
+  {
+    "id": 9,
+    "name": "வேளாண் தொழில்நுட்பம்",
+    "name_en": "Agri Technology",
+    "slug": "technology",
+    "icon": "fa-microchip",
+    "description": "ட்ரோன் உரம் தெளிப்பு, சொட்டுநீர் பாசன தானியங்கி கருவிகள், நவீன இயந்திரங்கள் மற்றும் புதிய கண்டுபிடிப்புகள்.",
+    "count": 18
+  },
+  {
+    "id": 10,
+    "name": "கால்நடை & மீன்வளம்",
+    "name_en": "Livestock & Fisheries",
+    "slug": "livestock",
+    "icon": "fa-cow",
+    "description": "கறவை மாடு வளர்ப்பு, நாட்டுக்கோழி, ஆடு வளர்ப்பு, மீன் பண்ணை மற்றும் தீவன மேலாண்மை நுணுக்கங்கள்.",
+    "count": 15
+  },
+  {
+    "id": 11,
+    "name": "வேளாண் இயந்திரங்கள்",
+    "name_en": "Farm Machinery",
+    "slug": "machinery",
+    "icon": "fa-tractor",
+    "description": "டிராக்டர், அறுவடை இயந்திரங்கள், பவர் டில்லர் மானிய விவரங்கள் மற்றும் பராமரிப்பு வழிகாட்டிகள்.",
+    "count": 12
+  },
+  {
+    "id": 12,
+    "name": "வெற்றிக் கதைகள்",
+    "name_en": "Success Stories",
+    "slug": "success-stories",
+    "icon": "fa-award",
+    "description": "குறைந்த செலவில் அதிக லாபம் ஈட்டிய தமிழக விவசாயிகளின் உற்சாகமளிக்கும் உண்மை வெற்றிக் கதைகள்.",
+    "count": 17
+  }
+]

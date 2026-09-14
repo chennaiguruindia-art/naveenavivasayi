@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" fill="#e8f5e9"/>
+  <path d="M 400,90 C 490,90 530,200 470,290 C 400,370 400,410 400,410 C 400,410 400,370 330,290 C 270,200 310,90 400,90 Z" fill="#2e7d32"/>
+  <path d="M 400,130 L 400,370 M 400,200 L 445,165 M 400,250 L 355,215 M 400,295 L 445,260" stroke="#a5d6a7" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="30" y="30" width="165" height="34" rx="6" fill="#1b5e20"/>
+  <text x="112" y="53" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">இயற்கை விவசாயம்</text>
+</svg>

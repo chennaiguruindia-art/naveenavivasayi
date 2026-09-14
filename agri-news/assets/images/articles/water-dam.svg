@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="damsky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0288d1"/>
+      <stop offset="100%" stop-color="#b3e5fc"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0288d1"/>
+      <stop offset="100%" stop-color="#01579b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#damsky)"/>
+  <rect x="0" y="180" width="800" height="100" fill="#78909c"/>
+  <g fill="#37474f">
+    <rect x="60" y="190" width="80" height="80" rx="4"/>
+    <rect x="200" y="190" width="80" height="80" rx="4"/>
+    <rect x="340" y="190" width="80" height="80" rx="4"/>
+    <rect x="480" y="190" width="80" height="80" rx="4"/>
+    <rect x="620" y="190" width="80" height="80" rx="4"/>
+  </g>
+  <path d="M 0,280 Q 200,265 400,275 T 800,265 L 800,450 L 0,450 Z" fill="url(#water)"/>
+  <g fill="#ffffff" opacity="0.65">
+    <path d="M 100,270 C 100,330 90,390 80,450 L 120,450 C 110,390 100,330 100,270 Z"/>
+    <path d="M 380,270 C 380,330 370,390 360,450 L 400,450 C 390,390 380,330 380,270 Z"/>
+    <path d="M 660,270 C 660,330 650,390 640,450 L 680,450 C 670,390 660,330 660,270 Z"/>
+  </g>
+  <rect x="30" y="30" width="160" height="34" rx="6" fill="#0277bd"/>
+  <text x="110" y="53" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">நீர் மேலாண்மை</text>
+</svg>

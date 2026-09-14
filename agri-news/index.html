@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ta" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>உழவர் செய்திகள் | தமிழ்நாட்டின் முதன்மை விவசாய செய்தித் தளம்</title>
+  <meta name="description" content="தமிழ்நாடு மற்றும் இந்திய அளவிலான விவசாய செய்திகள், நெல் கொள்முதல் விலை, அரசு மானியங்கள், இயற்கை விவசாயம் மற்றும் தினசரி உழவர் சந்தை நிலவரங்கள்.">
+  <meta name="keywords" content="விவசாய செய்திகள், நெல் விலை, அரசு மானியம், இயற்கை விவசாயம், தமிழ்நாடு உழவர், PM Kisan, உழவர் சந்தை">
+  <link rel="canonical" href="index.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="உழவர் செய்திகள் - விவசாயிகளுக்கான நம்பகமான தகவல் தளம்">
+  <meta property="og:description" content="விவசாய செய்திகள், நெல் கொள்முதல் விலை, அரசு திட்டங்கள், காய்கறி சந்தை விலை நிலவரங்கள்.">
+  <meta property="og:image" content="assets/images/articles/paddy-field.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="உழவர் செய்திகள்">
+  <meta name="twitter:description" content="விவசாயிகளுக்கான நம்பகமான தமிழ்நாடு வேளாண் செய்தி போர்ட்டல்.">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Reading Progress Bar -->
+  <div id="readingProgressBar"></div>
+
+  <!-- Top Utility Bar -->
+  <div class="top-utility-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span id="currentTamilDate"><i class="far fa-calendar-alt me-1"></i>திங்கள், 14 செப்டம்பர் 2026</span>
+        <span class="d-none d-md-inline text-white-50">|</span>
+        <a href="category.html?category=weather" class="d-none d-md-inline text-decoration-none">
+          <i class="fas fa-cloud-sun text-warning me-1"></i>வானிலை: 31°C மேகமூட்டம்
+        </a>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <!-- Font Size Controls -->
+        <div class="d-none d-sm-flex align-items-center me-2">
+          <span class="me-1 text-white-50 small">எழுத்து:</span>
+          <button class="font-size-btn" id="fontDecreaseBtn" title="எழுத்து அளவைக் குறை">A-</button>
+          <button class="font-size-btn" id="fontResetBtn" title="இயல்பு அளவு">A</button>
+          <button class="font-size-btn" id="fontIncreaseBtn" title="எழுத்து அளவை அதிகரி">A+</button>
+        </div>
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle-btn me-2" title="இரவு / பகல் முறை">
+          <i class="fas fa-moon me-1"></i><span class="theme-toggle-text d-none d-sm-inline small">இரவு முறை</span>
+        </button>
+        <span class="text-white-50 d-none d-md-inline">|</span>
+        <a href="about.html" class="d-none d-md-inline small">எங்களைப் பற்றி</a>
+        <a href="contact.html" class="d-none d-md-inline small contact-link">தொடர்புக்கு</a>
+        <!-- Social Media Icons -->
+        <div class="social-icons d-none d-lg-flex ms-2">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Left: Logo -->
+      <a href="index.html" class="brand-logo-wrap text-decoration-none">
+        <div class="brand-icon-box">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <div class="brand-text-box">
+          <span class="brand-title">உழவர் செய்திகள்</span>
+          <span class="brand-subtitle">விவசாயிகளுக்கான நம்பகமான தகவல் தளம்</span>
+        </div>
+      </a>
+
+      <!-- Center: Motto / Slogan -->
+      <div class="header-center-quote d-none d-lg-block">
+        <p class="mb-0 fw-semibold text-dark">"சுழன்றும்ஏர்ப் பின்னது உலகம் அதனால் உழந்தும் உழவே தலை"</p>
+        <small class="text-muted">- திருக்குறள் (1031)</small>
+      </div>
+
+      <!-- Right: Action Buttons -->
+      <div class="d-flex align-items-center gap-2 header-actions-group">
+        <button class="header-action-btn" id="openBookmarksModalBtn" title="சேமிக்கப்பட்ட செய்திகள்">
+          <i class="far fa-bookmark"></i>
+          <span class="header-badge bookmark-count-badge">0</span>
+        </button>
+        <a href="search.html" class="header-action-btn" title="செய்திகளைத் தேடுங்கள்">
+          <i class="fas fa-search"></i>
+        </a>
+        <a href="contact.html" class="btn btn-outline-success btn-sm rounded-pill px-3 d-none d-sm-inline-flex align-items-center gap-1">
+          <i class="far fa-envelope"></i><span>மடல்</span>
+        </a>
+        <!-- Mobile Hamburger -->
+        <button class="header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav" aria-controls="mobileOffcanvasNav" title="பட்டியல்">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Category Navigation (Desktop) -->
+  <nav class="sticky-nav-wrapper d-none d-lg-block">
+    <div class="container">
+      <ul class="category-nav-list">
+        <li class="category-nav-item"><a href="index.html" class="category-nav-link active"><i class="fas fa-home"></i>முகப்பு</a></li>
+        <li class="category-nav-item"><a href="category.html?category=agriculture-news" class="category-nav-link">விவசாய செய்திகள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=paddy" class="category-nav-link">நெல்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=horticulture" class="category-nav-link">காய்கறிகள் & பழங்கள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=government-schemes" class="category-nav-link">அரசுத் திட்டங்கள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=organic-farming" class="category-nav-link">இயற்கை விவசாயம்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=market-prices" class="category-nav-link">சந்தை விலை</a></li>
+        <li class="category-nav-item"><a href="category.html?category=weather" class="category-nav-link">வானிலை</a></li>
+        <li class="category-nav-item"><a href="category.html?category=technology" class="category-nav-link">தொழில்நுட்பம்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=livestock" class="category-nav-link">கால்நடை</a></li>
+        <li class="category-nav-item"><a href="video.html" class="category-nav-link"><i class="fas fa-video"></i>வீடியோ</a></li>
+        <li class="category-nav-item"><a href="photo.html" class="category-nav-link"><i class="fas fa-camera"></i>படங்கள்</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Breaking News Ticker -->
+  <div class="breaking-ticker-wrap">
+    <div class="container d-flex align-items-center h-100 px-0 px-sm-3">
+      <div class="breaking-label">
+        <i class="fas fa-bolt"></i><span>முக்கிய செய்திகள்</span>
+      </div>
+      <div class="ticker-content-area">
+        <div class="ticker-marquee" id="breakingTickerItems">
+          <span class="ticker-item"><i class="fas fa-circle ticker-bullet"></i>செய்திகள் ஏற்றப்படுகின்றன...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Advertisement Banner (728 x 90) -->
+  <div class="container my-3">
+    <div class="ad-slot-container ad-728x90">
+      <span class="ad-label-tag">விளம்பரம் / Advertisement</span>
+      <span class="ad-dimensions">728 x 90 Leaderboard Ad</span>
+      <small class="text-muted">வேளாண் உபகரணங்கள் & விதைகள் விளம்பர இடம்</small>
+    </div>
+  </div>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <div class="row g-4">
+      <!-- Main Content Column (Desktop: 70% / 8 Cols) -->
+      <div class="col-lg-8">
+
+        <!-- Hero News Section (50% Main Story + 50% 4 Smaller Stories Grid) -->
+        <section class="hero-news-section pt-0">
+          <div class="row g-3" id="heroNewsContainer">
+            <!-- Left 50%: Main Featured Article -->
+            <div class="col-md-6" id="heroFeaturedLeft">
+              <!-- Rendered dynamically via home.js -->
+            </div>
+            <!-- Right 50%: 4 Secondary Cards -->
+            <div class="col-md-6" id="heroSecondaryRight">
+              <!-- Rendered dynamically via home.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Mid Homepage Ad Banner (728 x 90) -->
+        <div class="ad-slot-container ad-728x90 my-4">
+          <span class="ad-label-tag">விளம்பரம் / Advertisement</span>
+          <span class="ad-dimensions">728 x 90 In-Feed Ad</span>
+          <small class="text-muted">உழவர் உற்பத்தியாளர் நிறுவனங்களுக்கான சிறப்பு இடம்</small>
+        </div>
+
+        <!-- Category Section 1: விவசாய செய்திகள் & கொள்கை -->
+        <section id="catSectionAgriNews">
+          <!-- Dynamic Category Content -->
+        </section>
+
+        <!-- Category Section 2: அரசுத் திட்டங்கள் & மானியம் -->
+        <section id="catSectionSchemes">
+          <!-- Dynamic Category Content -->
+        </section>
+
+        <!-- Category Section 3: சந்தை விலை & உழவர் சந்தை -->
+        <section id="catSectionMarket">
+          <!-- Dynamic Category Content -->
+        </section>
+
+        <!-- Category Section 4: இயற்கை விவசாயம் & பாரம்பரியம் -->
+        <section id="catSectionOrganic">
+          <!-- Dynamic Category Content -->
+        </section>
+
+        <!-- Category Section 5: வேளாண் தொழில்நுட்பம் -->
+        <section id="catSectionTech">
+          <!-- Dynamic Category Content -->
+        </section>
+
+      </div>
+
+      <!-- Right Sidebar (Desktop: 30% / 4 Cols) -->
+      <aside class="col-lg-4 sidebar-column">
+
+        <!-- Widget 1: Weather Widget -->
+        <div class="sidebar-widget p-0 border-0" id="sidebarWeatherBox">
+          <!-- Dynamic Weather rendered via app.js -->
+        </div>
+
+        <!-- Widget 2: Live Market Prices -->
+        <div class="sidebar-widget">
+          <div class="widget-header">
+            <i class="fas fa-chart-line widget-icon"></i>
+            <h4 class="widget-header-title">இன்றைய உழவர் சந்தை விலை</h4>
+          </div>
+          <div class="table-responsive">
+            <table class="table market-table align-middle">
+              <thead>
+                <tr>
+                  <th>பயிர் / பொருள்</th>
+                  <th>விலை</th>
+                  <th class="text-end">மாற்றம்</th>
+                </tr>
+              </thead>
+              <tbody id="sidebarMarketPriceBody">
+                <!-- Rendered via app.js -->
+              </tbody>
+            </table>
+          </div>
+          <div class="text-end mt-2">
+            <a href="category.html?category=market-prices" class="small text-success fw-bold">முழு விலை பட்டியல் →</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Advertisement (300 x 250) -->
+        <div class="ad-slot-container ad-300x250">
+          <span class="ad-label-tag">விளம்பரம் / Advertisement</span>
+          <span class="ad-dimensions">300 x 250 Medium Rectangle</span>
+          <small class="text-muted">டிராக்டர் & உரம் நிறுவன விளம்பர இடம்</small>
+        </div>
+
+        <!-- Widget 3: Live Tamil Agri News Feed -->
+        <div class="sidebar-widget">
+          <div class="widget-header d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <i class="fas fa-satellite-dish widget-icon text-danger"></i>
+              <h4 class="widget-header-title mb-0">நேரலை விவசாயச் செய்திகள்</h4>
+            </div>
+            <span class="badge bg-danger text-white py-1 px-2" style="font-size: 0.65rem; animation: pulseRed 1.5s infinite;">LIVE FEED</span>
+          </div>
+          <ul class="latest-news-list" id="sidebarLatestNewsList">
+            <!-- Rendered via app.js with live Tamil news -->
+          </ul>
+        </div>
+
+        <!-- Widget 4: Most Read 01 to 05 Ranking -->
+        <div class="sidebar-widget">
+          <div class="widget-header">
+            <i class="fas fa-fire widget-icon text-danger"></i>
+            <h4 class="widget-header-title">அதிகம் வாசிக்கப்பட்டவை</h4>
+          </div>
+          <ul class="most-read-list" id="sidebarMostReadList">
+            <!-- Rendered via app.js -->
+          </ul>
+        </div>
+
+        <!-- Widget 5: Newsletter Subscription -->
+        <div class="sidebar-widget p-0 border-0">
+          <div class="newsletter-box">
+            <i class="far fa-newspaper fa-2x mb-2 text-warning"></i>
+            <h5>வேளாண் செய்திமடல்</h5>
+            <p class="small text-white-50">தினசரி விலை நிலவரங்கள் மற்றும் அரசு மானிய அறிவிப்புகளை உங்கள் மின்னஞ்சலில் உடனுக்குடன் பெறுங்கள்.</p>
+            <form id="newsletterForm" class="mt-3">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="மின்னஞ்சல் முகவரி..." required>
+                <button class="btn btn-warning fw-bold text-dark" type="submit">இணை</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Brand & About -->
+        <div class="col-lg-4 col-md-6">
+          <div class="brand-logo-wrap mb-3">
+            <div class="brand-icon-box bg-white text-success">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <div>
+              <span class="footer-brand-title d-block">உழவர் செய்திகள்</span>
+              <span class="footer-subtitle d-block">விவசாயிகளுக்கான நம்பகமான தகவல் தளம்</span>
+            </div>
+          </div>
+          <p class="small text-white-50">
+            தமிழ்நாடு மற்றும் இந்திய அளவிலான வேளாண்மை செய்திகள், பாசன நிலவரம், பயிர் பாதுகாப்பு முறைகள், உழவர் சந்தை விலைகள் மற்றும் நவீன விவசாயத் தொழில்நுட்பங்களை உழவர் பெருமக்களிடம் கொண்டு சேர்க்கும் முதன்மை ஊடகத் தளம்.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 34px; height: 34px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 34px; height: 34px;"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 34px; height: 34px;"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="btn btn-outline-light btn-sm rounded-circle" style="width: 34px; height: 34px;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Categories -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading">முக்கிய பிரிவுகள்</h5>
+          <ul class="footer-link-list">
+            <li><a href="category.html?category=agriculture-news"><i class="fas fa-angle-right"></i>விவசாய செய்திகள்</a></li>
+            <li><a href="category.html?category=paddy"><i class="fas fa-angle-right"></i>நெல் சாகுபடி</a></li>
+            <li><a href="category.html?category=horticulture"><i class="fas fa-angle-right"></i>காய்கறிகள்</a></li>
+            <li><a href="category.html?category=government-schemes"><i class="fas fa-angle-right"></i>அரசு மானியங்கள்</a></li>
+            <li><a href="category.html?category=organic-farming"><i class="fas fa-angle-right"></i>இயற்கை விவசாயம்</a></li>
+            <li><a href="category.html?category=market-prices"><i class="fas fa-angle-right"></i>சந்தை விலை</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Useful Links -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="footer-heading">பயனுள்ள தளங்கள்</h5>
+          <ul class="footer-link-list">
+            <li><a href="https://pmkisan.gov.in" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i>பி.எம். கிசான் தளம்</a></li>
+            <li><a href="https://tnagrisnet.tn.gov.in" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i>உழவன் செயலி (TN)</a></li>
+            <li><a href="https://tnau.ac.in" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i>தமிழ்நாடு வேளாண் பல்கலை</a></li>
+            <li><a href="video.html"><i class="fas fa-angle-right"></i>விவசாய வீடியோக்கள்</a></li>
+            <li><a href="photo.html"><i class="fas fa-angle-right"></i>புகைப்படத் தொகுப்பு</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate & Newsletter -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">தகவல்கள் & செய்திமடல்</h5>
+          <ul class="footer-link-list mb-3">
+            <li><a href="about.html"><i class="fas fa-angle-right"></i>எங்களைப் பற்றி (About Us)</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i>தொடர்பு கொள்க (Contact)</a></li>
+            <li><a href="privacy-policy.html"><i class="fas fa-angle-right"></i>தனியுரிமைக் கொள்கை (Privacy Policy)</a></li>
+            <li><a href="terms.html"><i class="fas fa-angle-right"></i>விதிமுறைகள் & நிபந்தனைகள் (Terms)</a></li>
+          </ul>
+          <form id="footerNewsletterForm">
+            <div class="input-group">
+              <input type="email" class="form-control form-control-sm" placeholder="உங்கள் மின்னஞ்சல்..." required>
+              <button class="btn btn-success btn-sm" type="submit">பதிவு செய்</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Bar -->
+    <div class="footer-bottom-bar text-center">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>© 2026 உழவர் செய்திகள். All Rights Reserved.</span>
+        <span>விவசாயிகளுக்கான முதன்மை டிஜிட்டல் செய்தி இதழ்.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Navigation -->
+  <nav class="mobile-bottom-bar">
+    <ul class="mobile-bottom-nav">
+      <li class="mobile-bottom-item">
+        <a href="index.html" class="mobile-bottom-link active">
+          <i class="fas fa-home"></i>
+          <span>முகப்பு</span>
+        </a>
+      </li>
+      <li class="mobile-bottom-item">
+        <a href="category.html?category=agriculture-news" class="mobile-bottom-link">
+          <i class="fas fa-newspaper"></i>
+          <span>செய்திகள்</span>
+        </a>
+      </li>
+      <li class="mobile-bottom-item">
+        <a href="category.html?category=market-prices" class="mobile-bottom-link">
+          <i class="fas fa-chart-line"></i>
+          <span>சந்தை</span>
+        </a>
+      </li>
+      <li class="mobile-bottom-item">
+        <a href="search.html" class="mobile-bottom-link">
+          <i class="fas fa-search"></i>
+          <span>தேடல்</span>
+        </a>
+      </li>
+      <li class="mobile-bottom-item">
+        <a href="#" class="mobile-bottom-link open-bookmarks-link">
+          <i class="fas fa-bookmark"></i>
+          <span>சேமிப்பு</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start offcanvas-agri-menu" tabindex="-1" id="mobileOffcanvasNav" aria-labelledby="mobileOffcanvasNavLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <i class="fas fa-seedling fs-4 text-warning"></i>
+        <h5 class="offcanvas-title fw-bold" id="mobileOffcanvasNavLabel">உழவர் செய்திகள்</h5>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <!-- Search inside offcanvas -->
+      <div class="p-3 bg-light border-bottom">
+        <form action="search.html" method="GET">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="செய்திகளைத் தேடுங்கள்...">
+            <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+      <!-- Links -->
+      <ul class="offcanvas-nav-list">
+        <li class="offcanvas-nav-item"><a href="index.html" class="offcanvas-nav-link active"><i class="fas fa-home"></i>முகப்பு</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=agriculture-news" class="offcanvas-nav-link"><i class="fas fa-newspaper"></i>விவசாய செய்திகள்</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=paddy" class="offcanvas-nav-link"><i class="fas fa-seedling"></i>நெல் சாகுபடி</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=horticulture" class="offcanvas-nav-link"><i class="fas fa-carrot"></i>காய்கறிகள் & பழங்கள்</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=government-schemes" class="offcanvas-nav-link"><i class="fas fa-landmark"></i>அரசுத் திட்டங்கள் & மானியம்</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=organic-farming" class="offcanvas-nav-link"><i class="fas fa-leaf"></i>இயற்கை விவசாயம்</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=market-prices" class="offcanvas-nav-link"><i class="fas fa-chart-line"></i>சந்தை விலை</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=weather" class="offcanvas-nav-link"><i class="fas fa-cloud-sun-rain"></i>வானிலை</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=technology" class="offcanvas-nav-link"><i class="fas fa-microchip"></i>வேளாண் தொழில்நுட்பம்</a></li>
+        <li class="offcanvas-nav-item"><a href="category.html?category=livestock" class="offcanvas-nav-link"><i class="fas fa-cow"></i>கால்நடை & மீன்வளம்</a></li>
+        <li class="offcanvas-nav-item"><a href="video.html" class="offcanvas-nav-link"><i class="fas fa-video"></i>வீடியோக்கள்</a></li>
+        <li class="offcanvas-nav-item"><a href="photo.html" class="offcanvas-nav-link"><i class="fas fa-camera"></i>புகைப்படங்கள்</a></li>
+        <li class="offcanvas-nav-item"><a href="about.html" class="offcanvas-nav-link"><i class="fas fa-info-circle"></i>எங்களைப் பற்றி</a></li>
+        <li class="offcanvas-nav-item"><a href="contact.html" class="offcanvas-nav-link"><i class="fas fa-envelope"></i>தொடர்புக்கு</a></li>
+      </ul>
+      <!-- Theme Switch inside menu -->
+      <div class="p-3 border-top d-flex justify-content-between align-items-center">
+        <span class="fw-semibold">இரவு முறை (Dark Mode)</span>
+        <button class="btn btn-outline-success btn-sm theme-toggle-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="மேலே செல்ல"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- jQuery & Bootstrap 5 JS CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" fill="#eceff1"/>
+  <circle cx="290" cy="320" r="70" fill="#212121"/>
+  <circle cx="290" cy="320" r="38" fill="#b0bec5"/>
+  <circle cx="530" cy="345" r="45" fill="#212121"/>
+  <circle cx="530" cy="345" r="22" fill="#b0bec5"/>
+  <rect x="320" y="240" width="190" height="80" fill="#c62828" rx="8"/>
+  <polygon points="320,240 365,155 440,155 440,240" fill="#1565c0" opacity="0.75"/>
+  <rect x="445" y="220" width="22" height="22" fill="#ffc107"/>
+  <rect x="30" y="30" width="165" height="34" rx="6" fill="#37474f"/>
+  <text x="112" y="53" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">வேளாண் கருவிகள்</text>
+</svg>

@@ -1,0 +1,295 @@
+/* ===================================================================
+   UZHAVAR SEITHIGAL - AGRICULTURE NEWS PORTAL
+   Responsive Breakpoints & Mobile Optimization - responsive.css
+   =================================================================== */
+
+/* -------------------------------------------------------------
+   Mobile Bottom Sticky Bar (App-like Navigation for Mobile)
+   ------------------------------------------------------------- */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--news-border);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
+  z-index: 1040;
+  padding: 6px 0;
+}
+
+.mobile-bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-bottom-item {
+  flex: 1;
+  text-align: center;
+}
+
+.mobile-bottom-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--news-muted);
+  gap: 3px;
+  padding: 4px 0;
+}
+
+.mobile-bottom-link i {
+  font-size: 1.15rem;
+}
+
+.mobile-bottom-link.active,
+.mobile-bottom-link:hover {
+  color: var(--primary-green);
+}
+
+/* -------------------------------------------------------------
+   Large Desktops (1440px and above)
+   ------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+  .article-main-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Desktops & Laptops (992px to 1199px)
+   ------------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .brand-title {
+    font-size: 1.6rem;
+  }
+  .category-nav-link {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  .hero-headline {
+    font-size: 1.35rem;
+  }
+  .article-main-title {
+    font-size: 2rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Tablets (768px to 991px)
+   ------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .header-center-quote {
+    display: none;
+  }
+  .top-utility-bar {
+    font-size: 0.78rem;
+  }
+  .hero-main-card {
+    margin-bottom: 24px;
+  }
+  .article-main-title {
+    font-size: 1.75rem;
+  }
+  .article-sub-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .article-utility-actions {
+    width: 100%;
+    justify-content: flex-start;
+    border-top: 1px dashed var(--news-border);
+    padding-top: 10px;
+  }
+  .sidebar-column {
+    margin-top: 36px;
+  }
+}
+
+/* -------------------------------------------------------------
+   Mobile Devices (max-width: 767.98px)
+   ------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: 70px; /* Leave space for bottom bar */
+  }
+
+  .mobile-bottom-bar {
+    display: block;
+  }
+
+  .sticky-nav-wrapper {
+    display: none; /* Replaced by offcanvas and mobile bottom bar */
+  }
+
+  .top-utility-bar .social-icons,
+  .top-utility-bar .e-paper-link,
+  .top-utility-bar .contact-link {
+    display: none !important;
+  }
+
+  .main-header {
+    padding: 10px 0;
+  }
+
+  .brand-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+  }
+
+  .brand-title {
+    font-size: 1.35rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .breaking-label {
+    padding: 0 10px;
+    font-size: 0.7rem;
+  }
+
+  .hero-headline {
+    font-size: 1.25rem;
+  }
+
+  .hero-content {
+    padding: 14px;
+  }
+
+  .cat-big-card {
+    margin-bottom: 16px;
+  }
+
+  .cat-small-thumb {
+    width: 90px;
+    height: 65px;
+  }
+
+  .article-main-title {
+    font-size: 1.45rem;
+  }
+
+  .article-content-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .social-share-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 6px;
+    width: 100%;
+  }
+
+  .article-prev-next-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-728x90 {
+    height: 70px;
+  }
+
+  .table-responsive {
+    font-size: 0.8rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Small Mobile Devices (320px to 414px)
+   ------------------------------------------------------------- */
+@media (max-width: 414px) {
+  .brand-title {
+    font-size: 1.2rem;
+  }
+  .brand-subtitle {
+    display: none;
+  }
+  .header-actions-group .btn-login-text {
+    display: none;
+  }
+  .article-main-title {
+    font-size: 1.3rem;
+  }
+  .share-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  .cat-small-card {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .cat-small-thumb {
+    width: 75px;
+    height: 60px;
+  }
+  .cat-small-headline {
+    font-size: 0.85rem;
+  }
+}
+
+/* -------------------------------------------------------------
+   Offcanvas Menu Styling
+   ------------------------------------------------------------- */
+.offcanvas-agri-menu {
+  background-color: var(--bg-card);
+  color: var(--news-dark);
+  max-width: 320px;
+}
+
+.offcanvas-header {
+  background-color: var(--primary-green);
+  color: #ffffff;
+}
+
+.offcanvas-header .btn-close {
+  filter: invert(1);
+}
+
+.offcanvas-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offcanvas-nav-item {
+  border-bottom: 1px solid var(--news-border);
+}
+
+.offcanvas-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--news-dark);
+}
+
+.offcanvas-nav-link:hover,
+.offcanvas-nav-link.active {
+  background: var(--light-green);
+  color: var(--primary-green);
+  padding-left: 20px;
+}
+
+.offcanvas-nav-link i {
+  color: var(--primary-green);
+  width: 20px;
+  text-align: center;
+}

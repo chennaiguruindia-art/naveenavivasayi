@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" fill="#fff8e1"/>
+  <circle cx="400" cy="245" r="95" fill="#d84315"/>
+  <circle cx="465" cy="170" r="48" fill="#bf360c"/>
+  <polygon points="495,170 545,185 495,200" fill="#ffb300"/>
+  <circle cx="480" cy="160" r="7" fill="#ffffff"/>
+  <circle cx="482" cy="160" r="3.5" fill="#000000"/>
+  <path d="M 445,125 Q 465,105 480,125 Q 495,105 510,130" fill="#c62828"/>
+  <rect x="30" y="30" width="150" height="34" rx="6" fill="#d84315"/>
+  <text x="105" y="53" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">கால்நடை பண்ணை</text>
+</svg>

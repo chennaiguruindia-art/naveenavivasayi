@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ta" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>புகைப்படத் தொகுப்பு | உழவர் செய்திகள்</title>
+  <meta name="description" content="தமிழ்நாடு விவசாய நிலங்களின் களப் புகைப்படங்கள், அறுவடை விழாக்கள் மற்றும் பாரம்பரிய வேளாண் புகைப்படக் காட்சிகள்.">
+  <link rel="canonical" href="photo.html">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-utility-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <span id="currentTamilDate"><i class="far fa-calendar-alt me-1"></i>திங்கள், 14 செப்டம்பர் 2026</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button class="theme-toggle-btn me-2">
+          <i class="fas fa-moon me-1"></i><span class="theme-toggle-text d-none d-sm-inline small">இரவு முறை</span>
+        </button>
+        <a href="about.html" class="d-none d-md-inline small">எங்களைப் பற்றி</a>
+        <a href="contact.html" class="d-none d-md-inline small contact-link">தொடர்புக்கு</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="brand-logo-wrap text-decoration-none">
+        <div class="brand-icon-box">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <div class="brand-text-box">
+          <span class="brand-title">உழவர் செய்திகள்</span>
+          <span class="brand-subtitle">விவசாயிகளுக்கான நம்பகமான தகவல் தளம்</span>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button class="header-action-btn" id="openBookmarksModalBtn" title="சேமிக்கப்பட்ட செய்திகள்">
+          <i class="far fa-bookmark"></i>
+          <span class="header-badge bookmark-count-badge">0</span>
+        </button>
+        <a href="search.html" class="header-action-btn" title="தேடல்"><i class="fas fa-search"></i></a>
+        <button class="header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Nav -->
+  <nav class="sticky-nav-wrapper d-none d-lg-block">
+    <div class="container">
+      <ul class="category-nav-list">
+        <li class="category-nav-item"><a href="index.html" class="category-nav-link"><i class="fas fa-home"></i>முகப்பு</a></li>
+        <li class="category-nav-item"><a href="category.html?category=agriculture-news" class="category-nav-link">விவசாய செய்திகள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=paddy" class="category-nav-link">நெல்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=government-schemes" class="category-nav-link">அரசுத் திட்டங்கள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=organic-farming" class="category-nav-link">இயற்கை விவசாயம்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=market-prices" class="category-nav-link">சந்தை விலை</a></li>
+        <li class="category-nav-item"><a href="video.html" class="category-nav-link"><i class="fas fa-video"></i>வீடியோ</a></li>
+        <li class="category-nav-item"><a href="photo.html" class="category-nav-link active"><i class="fas fa-camera"></i>படங்கள்</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Photo Gallery Header -->
+  <section class="py-4 bg-light border-bottom text-center">
+    <div class="container">
+      <h1 class="fw-bold mb-2"><i class="fas fa-camera-retro me-2 text-success"></i>வேளாண் புகைப்படக் காட்சியகம்</h1>
+      <p class="text-muted mb-0">விவசாயிகளின் உழைப்பு, பசுமை வயல்கள் மற்றும் கிராமப்புற வாழ்வியலை விவரிக்கும் அரிய புகைப்படங்கள்.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <main class="container my-5">
+    <div class="row g-4" id="photoGalleryGrid">
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 photo-gallery-item">
+          <div class="position-relative cursor-pointer open-photo-lightbox" data-src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80" data-caption="தஞ்சை டெல்டாவில் பொன்னிறமாக விளைந்து நிற்கும் சம்பா நெற்பயிர்கள்">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="நெல் வயல்" style="height: 240px; object-fit: cover;" onerror="this.src='assets/images/articles/paddy-field.svg'">
+            <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-2 text-white small text-center">
+              <i class="fas fa-expand me-1"></i>பெரிதாக்கிப் பார்க்க கிளிக் செய்க
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">காவிரி டெல்டாவின் பசுமைத் தழுவல்</h6>
+            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>செப்டம்பர் 2026 | தஞ்சாவூர்</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 photo-gallery-item">
+          <div class="position-relative cursor-pointer open-photo-lightbox" data-src="https://images.unsplash.com/photo-1541888946425-d0fbb1861593?auto=format&fit=crop&w=1200&q=80" data-caption="மேட்டூர் அணையிலிருந்து ஆர்ப்பரித்து பாயும் காவிரியின் நீர்">
+            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb1861593?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="மேட்டூர் அணை" style="height: 240px; object-fit: cover;" onerror="this.src='assets/images/articles/water-dam.svg'">
+            <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-2 text-white small text-center">
+              <i class="fas fa-expand me-1"></i>பெரிதாக்கிப் பார்க்க கிளிக் செய்க
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">டெல்டா பாசனத்திற்கு சீறிப்பாயும் மேட்டூர் நீர்</h6>
+            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>செப்டம்பர் 2026 | சேலம்</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 photo-gallery-item">
+          <div class="position-relative cursor-pointer open-photo-lightbox" data-src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80" data-caption="கோயம்பேடு மற்றும் ஒட்டன்சத்திரம் உழவர் சந்தைகளில் வண்ணமயமான காய்கறி வரத்து">
+            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="காய்கறி சந்தை" style="height: 240px; object-fit: cover;" onerror="this.src='assets/images/articles/vegetables-market.svg'">
+            <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-2 text-white small text-center">
+              <i class="fas fa-expand me-1"></i>பெரிதாக்கிப் பார்க்க கிளிக் செய்க
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">உழவர் சந்தையின் விறுவிறுப்பான காலை நேரம்</h6>
+            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>செப்டம்பர் 2026 | திண்டுக்கல்</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 photo-gallery-item">
+          <div class="position-relative cursor-pointer open-photo-lightbox" data-src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=1200&q=80" data-caption="வயலில் உரத்தெளிப்பு பணியில் ஈடுபடுத்தப்படும் நவீன வேளாண் ட்ரோன்">
+            <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="ட்ரோன் செயல்முறை" style="height: 240px; object-fit: cover;" onerror="this.src='assets/images/articles/agri-drone.svg'">
+            <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-2 text-white small text-center">
+              <i class="fas fa-expand me-1"></i>பெரிதாக்கிப் பார்க்க கிளிக் செய்க
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">வானத்தில் சிறகடிக்கும் வேளாண் நவீனத் தொழில்நுட்பம்</h6>
+            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>செப்டம்பர் 2026 | கோவை</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 photo-gallery-item">
+          <div class="position-relative cursor-pointer open-photo-lightbox" data-src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=1200&q=80" data-caption="சொட்டுநீர் பாசனத்தின் மூலம் செழித்து வளரும் பயிர்கள்">
+            <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="சொட்டுநீர் பாசனம்" style="height: 240px; object-fit: cover;" onerror="this.src='assets/images/articles/drip-irrigation.svg'">
+            <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-2 text-white small text-center">
+              <i class="fas fa-expand me-1"></i>பெரிதாக்கிப் பார்க்க கிளிக் செய்க
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">ஒவ்வொரு துளி நீரையும் சேமிக்கும் நுண் பாசனம்</h6>
+            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>செப்டம்பர் 2026 | திருப்பூர்</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 photo-gallery-item">
+          <div class="position-relative cursor-pointer open-photo-lightbox" data-src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1200&q=80" data-caption="அறுவடைக்கு பின் நிலத்தை பண்படுத்தும் நவீன டிராக்டர்கள்">
+            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="டிராக்டர்" style="height: 240px; object-fit: cover;" onerror="this.src='assets/images/articles/tractor-machinery.svg'">
+            <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-75 p-2 text-white small text-center">
+              <i class="fas fa-expand me-1"></i>பெரிதாக்கிப் பார்க்க கிளிக் செய்க
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">விவசாயியின் தோழனாக இயந்திரமயம்</h6>
+            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>செப்டம்பர் 2026 | மதுரை</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container text-center py-4">
+      <p class="mb-0">© 2026 உழவர் செய்திகள். விவசாயிகளுக்கான முதன்மை டிஜிட்டல் செய்தி இதழ்.</p>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- jQuery & Bootstrap 5 JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.open-photo-lightbox').on('click', function() {
+        const src = $(this).data('src');
+        const caption = $(this).data('caption');
+        
+        let $modal = $('#photoLightboxModal');
+        if (!$modal.length) {
+          $('body').append(`
+            <div class="modal fade" id="photoLightboxModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-transparent border-0 text-center">
+                  <div class="position-relative d-inline-block">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 10;"></button>
+                    <img id="photoLightboxImg" src="" class="img-fluid rounded shadow-lg" alt="">
+                    <p id="photoLightboxCaption" class="text-white mt-2 bg-dark bg-opacity-75 py-2 px-3 rounded small"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `);
+          $modal = $('#photoLightboxModal');
+        }
+        $('#photoLightboxImg').attr('src', src);
+        $('#photoLightboxCaption').text(caption);
+        const bsModal = new bootstrap.Modal(document.getElementById('photoLightboxModal'));
+        bsModal.show();
+      });
+    });
+  </script>
+</body>
+</html>

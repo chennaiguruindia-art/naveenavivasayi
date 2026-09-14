@@ -1,0 +1,52 @@
+[
+  {
+    "rank": 1,
+    "id": 101,
+    "title": "நெல் கொள்முதல் விலை தொடர்பாக விவசாயிகள் புதிய கோரிக்கை: குவிண்டாலுக்கு ₹3,000 வழங்க வலியுறுத்தல்",
+    "category": "விவசாய கொள்கை",
+    "category_slug": "paddy",
+    "views": "18.4K",
+    "time": "இன்று",
+    "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "rank": 2,
+    "id": 104,
+    "title": "பிரதமர் கிசான் 18வது தவணை உதவித்தொகை எப்போது? மத்திய அரசு வெளியிட்டுள்ள புதிய தகவல்",
+    "category": "அரசுத் திட்டங்கள்",
+    "category_slug": "government-schemes",
+    "views": "15.9K",
+    "time": "நேற்று",
+    "image": "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "rank": 3,
+    "id": 105,
+    "title": "இயற்கை விவசாய முறையில் ஏக்கருக்கு 40 மூட்டை நெல் மகசூல் எடுத்து அசத்திய தஞ்சை விவசாயி!",
+    "category": "இயற்கை விவசாயம்",
+    "category_slug": "organic-farming",
+    "views": "12.8K",
+    "time": "2 நாட்களுக்கு முன்",
+    "image": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "rank": 4,
+    "id": 106,
+    "title": "வேளாண் ட்ரோன் வாங்க 50% வரை மானியம்: விண்ணப்பிப்பது எப்படி? முழு விவரம் இதோ!",
+    "category": "வேளாண் தொழில்நுட்பம்",
+    "category_slug": "technology",
+    "views": "11.2K",
+    "time": "3 நாட்களுக்கு முன்",
+    "image": "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "rank": 5,
+    "id": 108,
+    "title": "சொட்டுநீர் பாசனம் அமைக்க 100% வரை அரசு மானியம் பெறுவது எப்படி? வழிகாட்டி",
+    "category": "அரசுத் திட்டங்கள்",
+    "category_slug": "government-schemes",
+    "views": "9.7K",
+    "time": "4 நாட்களுக்கு முன்",
+    "image": "https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=400&q=80"
+  }
+]

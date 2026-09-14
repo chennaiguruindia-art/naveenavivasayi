@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ta" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>விவசாய வீடியோக்கள் | உழவர் செய்திகள்</title>
+  <meta name="description" content="வேளாண் கள ஆய்வுகள், இயற்கை விவசாய செய்முறைகள், முன்னோடி விவசாயிகளின் பேட்டிகள் வீடியோ வடிவில்.">
+  <link rel="canonical" href="video.html">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-utility-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <span id="currentTamilDate"><i class="far fa-calendar-alt me-1"></i>திங்கள், 14 செப்டம்பர் 2026</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button class="theme-toggle-btn me-2">
+          <i class="fas fa-moon me-1"></i><span class="theme-toggle-text d-none d-sm-inline small">இரவு முறை</span>
+        </button>
+        <a href="about.html" class="d-none d-md-inline small">எங்களைப் பற்றி</a>
+        <a href="contact.html" class="d-none d-md-inline small contact-link">தொடர்புக்கு</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html" class="brand-logo-wrap text-decoration-none">
+        <div class="brand-icon-box">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <div class="brand-text-box">
+          <span class="brand-title">உழவர் செய்திகள்</span>
+          <span class="brand-subtitle">விவசாயிகளுக்கான நம்பகமான தகவல் தளம்</span>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button class="header-action-btn" id="openBookmarksModalBtn" title="சேமிக்கப்பட்ட செய்திகள்">
+          <i class="far fa-bookmark"></i>
+          <span class="header-badge bookmark-count-badge">0</span>
+        </button>
+        <a href="search.html" class="header-action-btn" title="தேடல்"><i class="fas fa-search"></i></a>
+        <button class="header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Nav -->
+  <nav class="sticky-nav-wrapper d-none d-lg-block">
+    <div class="container">
+      <ul class="category-nav-list">
+        <li class="category-nav-item"><a href="index.html" class="category-nav-link"><i class="fas fa-home"></i>முகப்பு</a></li>
+        <li class="category-nav-item"><a href="category.html?category=agriculture-news" class="category-nav-link">விவசாய செய்திகள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=paddy" class="category-nav-link">நெல்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=government-schemes" class="category-nav-link">அரசுத் திட்டங்கள்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=organic-farming" class="category-nav-link">இயற்கை விவசாயம்</a></li>
+        <li class="category-nav-item"><a href="category.html?category=market-prices" class="category-nav-link">சந்தை விலை</a></li>
+        <li class="category-nav-item"><a href="video.html" class="category-nav-link active"><i class="fas fa-video"></i>வீடியோ</a></li>
+        <li class="category-nav-item"><a href="photo.html" class="category-nav-link"><i class="fas fa-camera"></i>படங்கள்</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Video Hero Header -->
+  <section class="py-4 bg-dark text-white text-center">
+    <div class="container py-2">
+      <h1 class="fw-bold mb-2"><i class="fas fa-play-circle me-2 text-danger"></i>விவசாய வீடியோ செய்திகள் & வழிகாட்டல்கள்</h1>
+      <p class="text-white-50 mb-0">இயற்கை உரம் தயாரிப்பு, ட்ரோன் செய்முறை மற்றும் முன்னோடி விவசாயிகளின் கள அனுபவப் பேட்டிகள்.</p>
+    </div>
+  </section>
+
+  <!-- Video Gallery Grid -->
+  <main class="container my-5">
+    <div class="row g-4" id="videoCardsGrid">
+
+      <!-- Video 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 video-card">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="இயற்கை உரம்" style="height: 210px; object-fit: cover;" onerror="this.src='assets/images/articles/organic-farm.svg'">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <button class="btn btn-danger btn-lg rounded-circle shadow play-video-trigger" data-title="ஜீவாமிர்தம் செய்முறை நேரடி விளக்கம் - முன்னோடி விவசாயி முருகேசன்" data-duration="12:45">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="badge bg-dark position-absolute bottom-0 end-0 m-2"><i class="far fa-clock me-1"></i>12:45</span>
+          </div>
+          <div class="card-body">
+            <span class="badge bg-success mb-2">இயற்கை விவசாயம்</span>
+            <h5 class="fw-bold card-title">ஜீவாமிர்தம் தயாரிக்கும் எளிய முறை: நேரடி கள விளக்கம்!</h5>
+            <p class="card-text text-muted small">நாட்டு மாட்டுச் சாணம் மற்றும் கோமியம் கொண்டு செலவில்லாமல் மண்ணை வளப்படுத்தும் முறை.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 video-card">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="ட்ரோன் செயல்முறை" style="height: 210px; object-fit: cover;" onerror="this.src='assets/images/articles/agri-drone.svg'">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <button class="btn btn-danger btn-lg rounded-circle shadow play-video-trigger" data-title="வேளாண் ட்ரோன் இயக்கும் முறை & உரம் தெளிக்கும் செய்முறை" data-duration="08:20">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="badge bg-dark position-absolute bottom-0 end-0 m-2"><i class="far fa-clock me-1"></i>08:20</span>
+          </div>
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">தொழில்நுட்பம்</span>
+            <h5 class="fw-bold card-title">1 ஏக்கருக்கு 8 நிமிடத்தில் உரம் தெளிக்கும் வேளாண் ட்ரோன் செயல்முறை</h5>
+            <p class="card-text text-muted small">ட்ரோன் மூலம் நானோ யூரியா தெளிப்பது எப்படி? மானியம் பெறுவது எப்படி? நேரடி வழிகாட்டல்.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 video-card">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="நாட்டுக்கோழி பண்ணை" style="height: 210px; object-fit: cover;" onerror="this.src='assets/images/articles/poultry-farm.svg'">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <button class="btn btn-danger btn-lg rounded-circle shadow play-video-trigger" data-title="நாட்டுக்கோழி வளர்ப்பில் மாதம் ₹60,000 லாபம் - பண்ணையாளர் சிறப்பு பேட்டி" data-duration="15:10">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="badge bg-dark position-absolute bottom-0 end-0 m-2"><i class="far fa-clock me-1"></i>15:10</span>
+          </div>
+          <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">கால்நடை</span>
+            <h5 class="fw-bold card-title">சிறு முதலீட்டில் நாட்டுக்கோழி பண்ணை அமைத்து மாதம் ₹60,000 ஈட்டும் ரகசியம்</h5>
+            <p class="card-text text-muted small">குறைந்த தீவனச் செலவில் அதிக லாபம் பெற பண்ணையாளர் சதாசிவம் தரும் ஆலோசனைகள்.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 video-card">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="சொட்டுநீர் பாசனம்" style="height: 210px; object-fit: cover;" onerror="this.src='assets/images/articles/drip-irrigation.svg'">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <button class="btn btn-danger btn-lg rounded-circle shadow play-video-trigger" data-title="100% அரசு மானியத்தில் சொட்டுநீர் பாசனம் அமைப்பது எப்படி?" data-duration="09:40">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="badge bg-dark position-absolute bottom-0 end-0 m-2"><i class="far fa-clock me-1"></i>09:40</span>
+          </div>
+          <div class="card-body">
+            <span class="badge bg-info text-dark mb-2">மானியம் & பாசனம்</span>
+            <h5 class="fw-bold card-title">சொட்டுநீர் பாசனம் அமைக்க அரசு மானியம் பெறுவது எப்படி? படிநிலை விளக்கம்</h5>
+            <p class="card-text text-muted small">தேவையான ஆவணங்கள், உழவன் செயலியில் விண்ணப்பிக்கும் முறை முழுமையான வீடியோ.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 video-card">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="நெல் சாகுபடி" style="height: 210px; object-fit: cover;" onerror="this.src='assets/images/articles/paddy-field.svg'">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <button class="btn btn-danger btn-lg rounded-circle shadow play-video-trigger" data-title="நெல் கொள்முதல் விலை கோரிக்கை - டெல்டா விவசாயிகள் கருத்தரங்கம்" data-duration="14:05">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="badge bg-dark position-absolute bottom-0 end-0 m-2"><i class="far fa-clock me-1"></i>14:05</span>
+          </div>
+          <div class="card-body">
+            <span class="badge bg-success mb-2">விவசாயிகள் குரல்</span>
+            <h5 class="fw-bold card-title">நெல் குவிண்டாலுக்கு ₹3,000 வழங்க வேண்டும்: விவசாயிகள் கோரிக்கை மாநாடு</h5>
+            <p class="card-text text-muted small">உற்பத்திச் செலவு உயர்வு மற்றும் ஈரப்பத விதிமுறைகள் குறித்து விவசாயிகள் எடுத்துரைத்த வாதங்கள்.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden h-100 video-card">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="கறவை மாடு பராமரிப்பு" style="height: 210px; object-fit: cover;" onerror="this.src='assets/images/articles/dairy-cattle.svg'">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <button class="btn btn-danger btn-lg rounded-circle shadow play-video-trigger" data-title="கறவை மாடுகளில் மடிநோய் வராமல் தடுக்கும் வழிகள் - மருத்துவர் ஆலோசனை" data-duration="11:15">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+            <span class="badge bg-dark position-absolute bottom-0 end-0 m-2"><i class="far fa-clock me-1"></i>11:15</span>
+          </div>
+          <div class="card-body">
+            <span class="badge bg-danger mb-2">கால்நடை மருத்துவம்</span>
+            <h5 class="fw-bold card-title">மடிநோய் மற்றும் கோமாரி நோயிலிருந்து பால் மாடுகளைப் பாதுகாக்கும் எளிய குறிப்புகள்</h5>
+            <p class="card-text text-muted small">கால்நடை மருத்துவக் கல்லூரி பேராசிரியர் டாக்டர் கவிதாவின் பிரத்யேக வீடியோ விளக்கம்.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Video Modal Player -->
+  <div class="modal fade" id="videoPlayerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-white border-0">
+        <div class="modal-header border-bottom border-secondary">
+          <h5 class="modal-title fw-bold" id="videoModalTitle"><i class="fas fa-play text-danger me-2"></i>வீடியோ பிளேயர்</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0 text-center">
+          <div class="ratio ratio-16x9 bg-black d-flex align-items-center justify-content-center">
+            <div class="p-4 text-center">
+              <i class="fas fa-play-circle fa-4x text-danger mb-3"></i>
+              <h5 id="videoModalInnerTitle" class="text-white">வீடியோ தயாராக உள்ளது</h5>
+              <p class="text-white-50 small mb-0">நேரடி வீடியோ ஸ்ட்ரீமிங் முன்னோட்டம் (Preview Player)</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-top border-secondary justify-content-between">
+          <span class="small text-white-50"><i class="far fa-clock me-1"></i>கால அளவு: <span id="videoModalDuration">00:00</span></span>
+          <button type="button" class="btn btn-outline-light btn-sm" data-bs-dismiss="modal">மூடுக</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container text-center py-4">
+      <p class="mb-0">© 2026 உழவர் செய்திகள். விவசாயிகளுக்கான முதன்மை டிஜிட்டல் செய்தி இதழ்.</p>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.play-video-trigger').on('click', function() {
+        const title = $(this).data('title');
+        const duration = $(this).data('duration');
+        $('#videoModalTitle').text(title);
+        $('#videoModalInnerTitle').text(title);
+        $('#videoModalDuration').text(duration);
+        const modal = new bootstrap.Modal(document.getElementById('videoPlayerModal'));
+        modal.show();
+      });
+    });
+  </script>
+</body>
+</html>

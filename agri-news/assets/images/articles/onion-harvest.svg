@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <rect width="800" height="450" fill="#fce4ec"/>
+  <circle cx="400" cy="270" r="100" fill="#880e4f"/>
+  <path d="M 400,170 C 412,130 430,95 445,65" stroke="#2e7d32" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M 400,170 C 388,130 375,100 360,75" stroke="#388e3c" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <circle cx="360" cy="245" r="14" fill="#ffffff" opacity="0.25"/>
+  <rect x="30" y="30" width="145" height="34" rx="6" fill="#880e4f"/>
+  <text x="102" y="53" fill="#ffffff" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">தோட்டக்கலை</text>
+</svg>
