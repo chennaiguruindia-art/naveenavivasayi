@@ -117,6 +117,14 @@
   .sidebar-column {
     margin-top: 36px;
   }
+
+  .category-section-grid {
+    display: block;
+  }
+
+  .category-section-grid > [class*="col-"] + [class*="col-"] {
+    margin-top: 1rem;
+  }
 }
 
 /* -------------------------------------------------------------

@@ -170,7 +170,7 @@ const HomeEngine = {
                 மேலும் செய்திகள் <i class="fas fa-arrow-right"></i>
               </a>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 category-section-grid">
               <!-- Left: 1 Big Article -->
               <div class="col-lg-5">
                 <div class="cat-big-card">
@@ -193,7 +193,7 @@ const HomeEngine = {
 
               <!-- Right: 4 Small Articles Grid -->
               <div class="col-lg-7">
-                <div class="row g-3">
+                <div class="row g-3 category-small-grid">
         `;
 
         smallArticles.forEach(function(small) {
