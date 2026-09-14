@@ -181,17 +181,28 @@ img {
 }
 
 .brand-icon-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  width: 220px;
+  height: 64px;
+  border-radius: 0;
+  background-image: url('../images/logo/logo.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 1.6rem;
-  box-shadow: 0 4px 10px rgba(27, 94, 32, 0.25);
+  color: transparent;
+  font-size: 0;
+  box-shadow: none;
   flex-shrink: 0;
+}
+
+.brand-icon-box i,
+.brand-text-box,
+.footer-brand-title,
+.footer-subtitle {
+  display: none;
 }
 
 .brand-text-box {
