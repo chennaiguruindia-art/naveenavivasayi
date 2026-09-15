@@ -181,8 +181,8 @@ img {
 }
 
 .brand-icon-box {
-  width: 240px;
-  height: 120px;
+  width: 280px;
+  height: 140px;
   border-radius: 0;
   background-image: url('../images/logo/logo.png');
   background-color: transparent;
@@ -196,6 +196,7 @@ img {
   font-size: 0;
   box-shadow: none;
   flex-shrink: 0;
+  max-width: 100%;
 }
 
 .brand-icon-box i,
