@@ -207,7 +207,7 @@ const HomeEngine = {
                   <a href="article.html?id=${small.id}">
                     <h4 class="cat-small-headline">${small.title}</h4>
                   </a>
-                  <small class="text-muted"><i class="far fa-clock me-1"></i>${small.published_at.split(' ')[0]}</small>
+                  <small class="text-muted cat-small-date"><i class="far fa-clock me-1"></i>${small.published_at.split(' ')[0]}</small>
                 </div>
               </div>
             </div>

@@ -86,6 +86,16 @@
   .article-main-title {
     font-size: 2rem;
   }
+  .category-section-grid {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  }
+  .cat-small-thumb {
+    width: 68px;
+    height: 58px;
+  }
+  .cat-small-headline {
+    font-size: 0.8rem;
+  }
 }
 
 /* -------------------------------------------------------------
@@ -237,9 +247,14 @@
     padding: 6px 10px;
     font-size: 0.75rem;
   }
+  .category-small-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
   .cat-small-card {
     flex-direction: row;
     gap: 10px;
+    padding: 8px 10px;
   }
   .cat-small-thumb {
     width: 75px;
