@@ -162,6 +162,47 @@ const App = {
     const $weatherBox = $('#sidebarWeatherBox');
     if (!$weatherBox.length) return;
 
+    const weatherDistricts = [
+      ['ariyalur', 'அரியலூர்'],
+      ['chengalpattu', 'செங்கல்பட்டு'],
+      ['chennai', 'சென்னை'],
+      ['coimbatore', 'கோயம்புத்தூர்'],
+      ['cuddalore', 'கடலூர்'],
+      ['dharmapuri', 'தருமபுரி'],
+      ['dindigul', 'திண்டுக்கல்'],
+      ['erode', 'ஈரோடு'],
+      ['kallakurichi', 'கள்ளக்குறிச்சி'],
+      ['kancheepuram', 'காஞ்சிபுரம்'],
+      ['kanniyakumari', 'கன்னியாகுமரி'],
+      ['karur', 'கரூர்'],
+      ['krishnagiri', 'கிருஷ்ணகிரி'],
+      ['madurai', 'மதுரை'],
+      ['mayiladuthurai', 'மயிலாடுதுறை'],
+      ['nagapattinam', 'நாகப்பட்டினம்'],
+      ['nilgiris', 'நீலகிரி'],
+      ['namakkal', 'நாமக்கல்'],
+      ['perambalur', 'பெரம்பலூர்'],
+      ['pudukkottai', 'புதுக்கோட்டை'],
+      ['ramanathapuram', 'ராமநாதபுரம்'],
+      ['ranipet', 'ராணிப்பேட்டை'],
+      ['salem', 'சேலம்'],
+      ['sivaganga', 'சிவகங்கை'],
+      ['tenkasi', 'தென்காசி'],
+      ['thanjavur', 'தஞ்சாவூர்'],
+      ['theni', 'தேனி'],
+      ['thoothukudi', 'தூத்துக்குடி'],
+      ['tiruchirappalli', 'திருச்சிராப்பள்ளி'],
+      ['tirunelveli', 'திருநெல்வேலி'],
+      ['tirupathur', 'திருப்பத்தூர்'],
+      ['tiruppur', 'திருப்பூர்'],
+      ['tiruvallur', 'திருவள்ளூர்'],
+      ['tiruvannamalai', 'திருவண்ணாமலை'],
+      ['tiruvarur', 'திருவாரூர்'],
+      ['vellore', 'வேலூர்'],
+      ['viluppuram', 'விழுப்புரம்'],
+      ['virudhunagar', 'விருதுநகர்']
+    ];
+
     function updateWeather(cityKey) {
       $weatherBox.html(`
         <div class="weather-card-box text-center py-4">
@@ -180,11 +221,9 @@ const App = {
                 <small class="text-white-50">${data.condition}</small>
               </div>
               <select id="weatherDistrictSelect" class="form-select form-select-sm bg-white text-dark w-auto">
-                <option value="thanjavur" ${cityKey === 'thanjavur' ? 'selected' : ''}>தஞ்சாவூர்</option>
-                <option value="chennai" ${cityKey === 'chennai' ? 'selected' : ''}>சென்னை</option>
-                <option value="madurai" ${cityKey === 'madurai' ? 'selected' : ''}>மதுரை</option>
-                <option value="coimbatore" ${cityKey === 'coimbatore' ? 'selected' : ''}>கோவை</option>
-                <option value="trichy" ${cityKey === 'trichy' ? 'selected' : ''}>திருச்சி</option>
+                ${weatherDistricts.map(function(district) {
+                  return `<option value="${district[0]}" ${cityKey === district[0] ? 'selected' : ''}>${district[1]}</option>`;
+                }).join('')}
               </select>
             </div>
             <div class="d-flex align-items-center justify-content-between my-3">
@@ -204,7 +243,7 @@ const App = {
       });
     }
 
-    updateWeather('thanjavur');
+    updateWeather('chennai');
   },
 
   // Search Inputs

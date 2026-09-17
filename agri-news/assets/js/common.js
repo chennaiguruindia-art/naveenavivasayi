@@ -133,14 +133,47 @@ const AgriData = {
   // Get live weather for Tamil Nadu district via Open-Meteo Free API
   getLiveWeather: function(districtKey) {
     const coords = {
-      'thanjavur': { name: 'தஞ்சாவூர்', lat: 10.7870, lon: 79.1378 },
+      'ariyalur': { name: 'அரியலூர்', lat: 11.1401, lon: 79.0787 },
+      'chengalpattu': { name: 'செங்கல்பட்டு', lat: 12.6819, lon: 79.9888 },
       'chennai': { name: 'சென்னை', lat: 13.0827, lon: 80.2707 },
+      'cuddalore': { name: 'கடலூர்', lat: 11.7480, lon: 79.7714 },
+      'dharmapuri': { name: 'தருமபுரி', lat: 12.1211, lon: 78.1582 },
+      'dindigul': { name: 'திண்டுக்கல்', lat: 10.3673, lon: 77.9803 },
+      'erode': { name: 'ஈரோடு', lat: 11.3410, lon: 77.7172 },
+      'kallakurichi': { name: 'கள்ளக்குறிச்சி', lat: 11.7380, lon: 78.9639 },
+      'kancheepuram': { name: 'காஞ்சிபுரம்', lat: 12.8342, lon: 79.7036 },
+      'kanniyakumari': { name: 'கன்னியாகுமரி', lat: 8.0883, lon: 77.5385 },
+      'karur': { name: 'கரூர்', lat: 10.9601, lon: 78.0766 },
+      'krishnagiri': { name: 'கிருஷ்ணகிரி', lat: 12.5186, lon: 78.2137 },
+      'mayiladuthurai': { name: 'மயிலாடுதுறை', lat: 11.1035, lon: 79.6550 },
+      'nagapattinam': { name: 'நாகப்பட்டினம்', lat: 10.7672, lon: 79.8449 },
+      'nilgiris': { name: 'நீலகிரி', lat: 11.4102, lon: 76.6950 },
       'madurai': { name: 'மதுரை', lat: 9.9252, lon: 78.1198 },
+      'namakkal': { name: 'நாமக்கல்', lat: 11.2194, lon: 78.1677 },
+      'perambalur': { name: 'பெரம்பலூர்', lat: 11.2333, lon: 78.8833 },
+      'pudukkottai': { name: 'புதுக்கோட்டை', lat: 10.3833, lon: 78.8001 },
+      'ramanathapuram': { name: 'ராமநாதபுரம்', lat: 9.3639, lon: 78.8395 },
+      'ranipet': { name: 'ராணிப்பேட்டை', lat: 12.9249, lon: 79.3333 },
+      'salem': { name: 'சேலம்', lat: 11.6643, lon: 78.1460 },
+      'sivaganga': { name: 'சிவகங்கை', lat: 9.8433, lon: 78.4809 },
+      'tenkasi': { name: 'தென்காசி', lat: 8.9590, lon: 77.3152 },
+      'thanjavur': { name: 'தஞ்சாவூர்', lat: 10.7870, lon: 79.1378 },
+      'theni': { name: 'தேனி', lat: 10.0104, lon: 77.4768 },
+      'thoothukudi': { name: 'தூத்துக்குடி', lat: 8.7642, lon: 78.1348 },
+      'tiruchirappalli': { name: 'திருச்சிராப்பள்ளி', lat: 10.7905, lon: 78.7047 },
+      'tirunelveli': { name: 'திருநெல்வேலி', lat: 8.7139, lon: 77.7567 },
+      'tirupathur': { name: 'திருப்பத்தூர்', lat: 12.4961, lon: 78.5730 },
+      'tiruppur': { name: 'திருப்பூர்', lat: 11.1085, lon: 77.3411 },
+      'tiruvallur': { name: 'திருவள்ளூர்', lat: 13.1439, lon: 79.9080 },
+      'tiruvannamalai': { name: 'திருவண்ணாமலை', lat: 12.2253, lon: 79.0747 },
+      'tiruvarur': { name: 'திருவாரூர்', lat: 10.7667, lon: 79.6333 },
+      'vellore': { name: 'வேலூர்', lat: 12.9165, lon: 79.1325 },
+      'viluppuram': { name: 'விழுப்புரம்', lat: 11.9401, lon: 79.4861 },
+      'virudhunagar': { name: 'விருதுநகர்', lat: 9.5680, lon: 77.9624 },
       'coimbatore': { name: 'கோயம்புத்தூர்', lat: 11.0168, lon: 76.9558 },
-      'trichy': { name: 'திருச்சிராப்பள்ளி', lat: 10.7905, lon: 78.7047 }
     };
 
-    const target = coords[districtKey] || coords['thanjavur'];
+    const target = coords[districtKey] || coords['chennai'];
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${target.lat}&longitude=${target.lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m`;
 
     return $.ajax({
